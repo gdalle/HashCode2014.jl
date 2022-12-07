@@ -40,10 +40,4 @@ DocMeta.setdocmeta!(HashCode2014, :DocTestSetup, :(using HashCode2014); recursiv
         @test city.total_duration == 54000
         @test is_feasible(solution, city)
     end
-
-    @testset verbose = true "Plotting" begin
-        city = read_city()
-        solution = random_walk(city)
-        plot_streets(city, solution; path=nothing)
-    end
 end
